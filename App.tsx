@@ -1,25 +1,20 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {NavigationHeader} from './app/components';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {LoginScreen} from './app/screens';
 import {FeedsScreen} from './app/screens/Feeds';
-import {COLORS} from './app/utils/colors';
 
-const styles = StyleSheet.create({
-  appContainer: {
-    backgroundColor: COLORS.SMOOTH_GREY,
-    height: '100%',
-    width: '100%',
-  },
-});
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.appContainer}>
-      {/* <LoginScreen/> */}
-      <FeedsScreen />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Feeds" component={FeedsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

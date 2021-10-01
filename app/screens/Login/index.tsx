@@ -6,7 +6,8 @@ import {LoginTextInput} from '../../components/LoginTextInput';
 import {emailValidation, passwordValidation} from '../../utils/validation';
 import styles from './login.styles';
 
-export const LoginScreen: React.FC = () => {
+//TODO: typing
+export const LoginScreen: React.FC = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
@@ -27,6 +28,7 @@ export const LoginScreen: React.FC = () => {
 
   const onLoginPress = () => {
     console.log(email, password);
+    navigation.navigate('Feeds');
   };
 
   return (
