@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     color: COLORS.RED,
     lineHeight: 24,
     paddingVertical: 7,
-  }
+  },
 });
 
 export default styles;
