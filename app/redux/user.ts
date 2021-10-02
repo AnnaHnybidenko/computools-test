@@ -6,10 +6,10 @@ export const userSlice = createSlice({
     email: null,
   },
   reducers: {
-    setEmail: (state, action) => {
+    setUserEmail: (state, action) => {
       state.email = action.payload;
     },
   },
 });
 
-export const {setEmail} = userSlice.actions;
+export const {setUserEmail} = userSlice.actions;
