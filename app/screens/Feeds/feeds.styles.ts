@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
 
   feedContainer: {
     flex: 1,
-    height: 250,
     width: 350,
     margin: 4,
   },
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 10,
     width: '100%',
-    height: 300,
+    height: 250,
     alignItems: 'center',
     justifyContent: 'center',
   },
