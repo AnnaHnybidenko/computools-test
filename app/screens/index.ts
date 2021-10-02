@@ -1,2 +1,3 @@
 export * from './Login';
-//export * from './UserProfile';
+export * from './Feeds';
+//export * from './Profile';

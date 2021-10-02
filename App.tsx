@@ -1,20 +1,14 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Provider} from 'react-redux';
+import {RootNavigator} from './app/navigation';
 
-import {LoginScreen} from './app/screens';
-import {FeedsScreen} from './app/screens/Feeds';
-
-const Stack = createNativeStackNavigator();
+import {store} from './app/redux';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Feeds" component={FeedsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <RootNavigator />
+    </Provider>
   );
 };
 
